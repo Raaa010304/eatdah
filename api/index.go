@@ -1,6 +1,6 @@
 package handler
 
-import (	
+import (
 	"eatdah/controllers/menucontroller"
 	"eatdah/controllers/menufavoritecontroller"
 	"eatdah/models"
@@ -9,21 +9,21 @@ import (
 )
 
 func Handler(c *gin.Context) {
-	server := gin.Default()
+	r := gin.Default()
 
 	models.ConnectDatabase()
 
-	server.GET("/api/menus", menucontroller.Index)
-	server.GET("/api/menu/:id", menucontroller.Show)
-	server.POST("/api/menu", menucontroller.Create)
-	server.PUT("/api/menu/:id", menucontroller.Update)
-	server.DELETE("/api/menu", menucontroller.Delete)
+	r.GET("/api/menus", menucontroller.Index)
+	r.GET("/api/menu/:id", menucontroller.Show)
+	r.POST("/api/menu", menucontroller.Create)
+	r.PUT("/api/menu/:id", menucontroller.Update)
+	r.DELETE("/api/menu", menucontroller.Delete)
 
-	server.GET("/api/menusfavorite", menufavoritecontroller.Index)
-	server.GET("/api/menufavorite/:id", menufavoritecontroller.Show)
-	server.POST("/api/menufavorite", menufavoritecontroller.Create)
-	server.PUT("/api/menufavorite/:id", menufavoritecontroller.Update)
-	server.DELETE("/api/menufavorite", menufavoritecontroller.Delete)
+	r.GET("/api/menusfavorite", menufavoritecontroller.Index)
+	r.GET("/api/menufavorite/:id", menufavoritecontroller.Show)
+	r.POST("/api/menufavorite", menufavoritecontroller.Create)
+	r.PUT("/api/menufavorite/:id", menufavoritecontroller.Update)
+	r.DELETE("/api/menufavorite", menufavoritecontroller.Delete)
 
-	server.Run()
+	r.Run()
 }
