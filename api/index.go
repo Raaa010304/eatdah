@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"eatdah/controllers/menucontroller"
-	"eatdah/controllers/menufavoritecontroller"
-	"eatdah/models"
+	"./controllers/menucontroller"
+	"./controllers/menufavoritecontroller"
+	"./models"
 
 	"github.com/gin-gonic/gin"
 )
