@@ -25,5 +25,5 @@ func Handler() {
 	server.PUT("/api/menufavorite/:id", menufavoritecontroller.Update)
 	server.DELETE("/api/menufavorite", menufavoritecontroller.Delete)
 
-	server.run()
+	server.Handle()
 }
