@@ -1,7 +1,6 @@
 package handler
 
 import (
-	"net/http"
 	"eatdah/controllers/menucontroller"
 	"eatdah/controllers/menufavoritecontroller"
 	"eatdah/models"
@@ -9,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Handler(w http.ResponseWriter, r *http.Request) {
+func Handler(c *gin.Context) {
 	r := gin.Default()
 
 	models.ConnectDatabase()
