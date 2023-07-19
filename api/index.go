@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (	
 	"eatdah/controllers/menucontroller"
@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Main() {
+func Handler(c *gin.Context) {
 	server := gin.Default()
 
 	models.ConnectDatabase()
