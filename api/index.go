@@ -8,8 +8,8 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Handler(c *gin.Context) {
-	r := gin.Default()
+func Handler(w http.ResponseWriter, r *http.Request) {
+	r := New()
 
 	models.ConnectDatabase()
 
