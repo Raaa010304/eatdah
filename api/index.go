@@ -1,4 +1,4 @@
-package handler
+package main
 
 import (	
 	"eatdah/controllers/menucontroller"
@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Handler() {
+func Main() {
 	server := gin.Default()
 
 	models.ConnectDatabase()
@@ -25,5 +25,5 @@ func Handler() {
 	server.PUT("/api/menufavorite/:id", menufavoritecontroller.Update)
 	server.DELETE("/api/menufavorite", menufavoritecontroller.Delete)
 
-	server.Handle()
+	server.Run()
 }
