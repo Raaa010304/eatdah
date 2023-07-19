@@ -1,10 +1,6 @@
 package handler
 
-import (
-
-	"fmt"
-	"net/http"
-	
+import (	
 	"eatdah/controllers/menucontroller"
 	"eatdah/controllers/menufavoritecontroller"
 	"eatdah/models"
@@ -12,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func Handler(w http.ResponseWriter, r *http.Request) {
+func Handler() {
 	server := gin.Default()
 
 	models.ConnectDatabase()
@@ -29,5 +25,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	server.PUT("/api/menufavorite/:id", menufavoritecontroller.Update)
 	server.DELETE("/api/menufavorite", menufavoritecontroller.Delete)
 
-	server.Handle(w , r)
+	server.run()
 }
