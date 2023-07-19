@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_96265b3c-0c16-4309-8ad5-26d8ca6bb4dd",
+      "org_id": "user_6d6a53c3-0422-4b69-a325-420ad66c1672",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_96265b3c-0c16-4309-8ad5-26d8ca6bb4dd.git",
+      "name": "eatdah",
+      "alias": "eatdah"
+    }
+  ]
+}
